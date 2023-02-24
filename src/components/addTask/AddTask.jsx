@@ -1,7 +1,7 @@
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { axios } from "react";
+import { useState } from "react";
+import axios from "axios";
 
 function AddTask({ getTask }) {
   const [task, setTask] = useState("");
@@ -24,18 +24,18 @@ function AddTask({ getTask }) {
   };
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Task</Form.Label>
+      <Form.Group className="mb-3 mt-4" controlId="formBasicEmail">
+        <Form.Label className="fw-bold">Task</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter Task"
           value={task}
+          placeholder="Enter Task"
           onChange={(e) => setTask(e.target.value)}
         />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Date</Form.Label>
+        <Form.Label className="fw-bold">Date</Form.Label>
         <Form.Control
           type="date"
           value={date}
