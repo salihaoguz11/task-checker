@@ -28,7 +28,7 @@ const Home = () => {
       <Button onClick={() => toggle()} variant="danger">
         {text}
       </Button>
-      <AddTask />
+      <AddTask getTask={getTask} />
       <TaskList />
     </div>
   );
